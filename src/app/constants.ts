@@ -1,8 +1,10 @@
+import { environment } from "../environments/environment";
+
 export class Constants {
-  private static SLACK_CLIENT_ID = '6146359360.78348665680';
-  private static SLACK_CLIENT_SECRET = 'e9aca6435a4e1fc82655fb181a6ede43';
-  private static REDIRECT_URL = 'http://localhost:4200';
-  private static API_BASE_URL = 'https://xapnik.com/api/v1';
+  private static SLACK_CLIENT_ID = environment.slackClientId;
+  private static SLACK_CLIENT_SECRET = environment.slackClientSecret;
+  private static REDIRECT_URL = environment.redirectUrl;
+  private static API_BASE_URL = environment.apiBaseUrl;
   public static SLACK_URL = 'https://slack.com/oauth/authorize?scope=incoming-webhook,commands,bot,team:read,users:read,chat:write:user&client_id=' + Constants.SLACK_CLIENT_ID + '&state=xpnk_add_to_slack' + '&redirect_uri=' + Constants.REDIRECT_URL;
 
   public static slackTokenUrl(slack_team_code) {
