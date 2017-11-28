@@ -1,0 +1,46 @@
+.spacer {
+  flex: 1 1 auto;
+}
+.slack-button {
+  margin-top:8px;
+}
+.logo {
+  margin-top:8px;
+  margin-right:5px;
+}
+.toolbar {
+  position: fixed;
+  top: 0
+}
+.container-top {
+  background-color: #4B4C4C;
+  margin-top:30px;
+}
+.container-middle {
+  background-color: #1CB4AC;
+}
+.container-bottom {
+  background-color: #BCBDBD;
+}
+
+.header-main {
+  color:#00b5ad;
+}
+
+.desc.main {
+  color:white;
+}
+
+.header-secondary {
+  color: #493636;
+}
+
+.desc.secondary {
+  color: black;;
+}
+
+.content {
+  padding:0px 30px;
+  position: absolute;
+  left: 5px;
+}
