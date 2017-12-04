@@ -13,6 +13,8 @@ import { FaqComponent } from './faq/faq.component';
 import { DemoComponent } from './demo/demo.component';
 import { HomeFooterComponent } from './home-footer/home-footer.component';
 import { AddedToSlackComponent } from './added-to-slack/added-to-slack.component';
+import { SlackInviteComponent } from './slack-invite/slack-invite.component';
+import { MessageAlertComponent } from './message-alert/message-alert.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { AddedToSlackComponent } from './added-to-slack/added-to-slack.component
     FaqComponent,
     DemoComponent,
     HomeFooterComponent,
-    AddedToSlackComponent
+    AddedToSlackComponent,
+    SlackInviteComponent,
+    MessageAlertComponent
   ],
   imports: [
     BrowserModule,
