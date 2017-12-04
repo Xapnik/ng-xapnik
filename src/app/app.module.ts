@@ -10,6 +10,7 @@ import { TopbarComponent } from './topbar/topbar.component';
 import { HomeBannerComponent } from './home-banner/home-banner.component';
 import { FaqComponent } from './faq/faq.component';
 import { DemoComponent } from './demo/demo.component';
+import { HomeFooterComponent } from './home-footer/home-footer.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { DemoComponent } from './demo/demo.component';
     TopbarComponent,
     HomeBannerComponent,
     FaqComponent,
-    DemoComponent
+    DemoComponent,
+    HomeFooterComponent
   ],
   imports: [
     BrowserModule,
