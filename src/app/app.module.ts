@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatToolbarModule, MatGridListModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
@@ -11,6 +12,7 @@ import { HomeBannerComponent } from './home-banner/home-banner.component';
 import { FaqComponent } from './faq/faq.component';
 import { DemoComponent } from './demo/demo.component';
 import { HomeFooterComponent } from './home-footer/home-footer.component';
+
 
 
 @NgModule({
@@ -25,6 +27,7 @@ import { HomeFooterComponent } from './home-footer/home-footer.component';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatGridListModule,
