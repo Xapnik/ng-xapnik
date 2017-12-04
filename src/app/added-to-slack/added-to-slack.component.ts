@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Constants } from '../constants';
+import { HttpParams } from '@angular/common/http';
 
 @Component({
   selector: 'app-added-to-slack',
@@ -26,7 +27,9 @@ export class AddedToSlackComponent implements OnInit {
   }
 
   createSlackGroup(access_token, bot_token) {
-    this.http.post(Constants.newSlackGroupUrl(access_token, bot_token), {}).subscribe(data => {
+    this.http.post(Constants.newSlackGroupUrl(access_token, bot_token), null, {
+      params: Constants.newSlackGroupParams(access_token, bot_token)
+    }).subscribe(data => {
       console.log(data);
     });
   }

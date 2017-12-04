@@ -2,14 +2,18 @@
   flex: 1 1 auto;
 }
 .slack-button {
-  margin-top:8px;
+  margin-top: 8px;
   cursor: pointer;
 }
 .logo {
-  margin-top:8px;
-  margin-right:5px;
+  margin-top: 8px;
+  margin-right: 5px;
 }
 .toolbar {
   position: fixed;
-  top: 0
+  top: 0;
+}
+.root-link {
+  text-decoration: none;
+  color: black;
 }

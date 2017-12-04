@@ -1,4 +1,5 @@
 import { environment } from '../environments/environment';
+import { HttpParams } from '@angular/common/http';
 
 export class Constants {
   private static SLACK_CLIENT_ID = environment.slackClientId;
@@ -6,7 +7,7 @@ export class Constants {
   private static REDIRECT_URL = environment.redirectUrl;
   private static API_BASE_URL = environment.apiBaseUrl;
   public static SLACK_URL =
-  'https://slack.com/oauth/authorize?scope=incoming-webhook,commands,bot,team:read,users:read,chat:write:user&client_id=' +
+    'https://slack.com/oauth/authorize?scope=incoming-webhook,commands,bot,team:read,users:read,chat:write:user&client_id=' +
     Constants.SLACK_CLIENT_ID +
     '&state=xpnk_add_to_slack' +
     '&redirect_uri=' +
@@ -26,14 +27,15 @@ export class Constants {
   }
 
   public static newSlackGroupUrl(access_token, bot_token) {
-    return (
-      Constants.API_BASE_URL +
-      '/slack_new_group?team_token=' +
-      access_token +
-      '&bot_token=' +
-      bot_token +
-      '&testMode=true'
-    );
+    return Constants.API_BASE_URL + '/slack_new_group';
+  }
+
+  public static newSlackGroupParams(access_token, bot_token) {
+    const params = {};
+    params['team_token'] = access_token;
+    params['bot_token'] = bot_token;
+    params['testMode'] = !environment.production;
+    return params;
   }
 
   public static checkInviteUrl(token, groupName) {
