@@ -47,4 +47,11 @@ export class Constants {
       groupName
     );
   }
+
+  public static checkInviteParams(token, groupName) {
+    const params = {};
+    params['xpnk_token'] = token;
+    params['xpnk_group_name'] = groupName;
+    return params;
+  }
 }
