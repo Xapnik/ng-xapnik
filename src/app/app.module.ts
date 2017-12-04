@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { TopbarComponent } from './topbar/topbar.component';
 import { HomeBannerComponent } from './home-banner/home-banner.component';
+import { FaqComponent } from './faq/faq.component';
+import { DemoComponent } from './demo/demo.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { HomeBannerComponent } from './home-banner/home-banner.component';
     AppComponent,
     HomeComponent,
     TopbarComponent,
-    HomeBannerComponent
+    HomeBannerComponent,
+    FaqComponent,
+    DemoComponent
   ],
   imports: [
     BrowserModule,
