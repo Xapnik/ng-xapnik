@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule, MatGridListModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -12,8 +12,7 @@ import { HomeBannerComponent } from './home-banner/home-banner.component';
 import { FaqComponent } from './faq/faq.component';
 import { DemoComponent } from './demo/demo.component';
 import { HomeFooterComponent } from './home-footer/home-footer.component';
-
-
+import { AddedToSlackComponent } from './added-to-slack/added-to-slack.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +22,8 @@ import { HomeFooterComponent } from './home-footer/home-footer.component';
     HomeBannerComponent,
     FaqComponent,
     DemoComponent,
-    HomeFooterComponent
+    HomeFooterComponent,
+    AddedToSlackComponent
   ],
   imports: [
     BrowserModule,
@@ -36,4 +36,4 @@ import { HomeFooterComponent } from './home-footer/home-footer.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

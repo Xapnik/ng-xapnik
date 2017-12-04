@@ -12,23 +12,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {}
 
-  createSlackGroup(access_token, bot_token) {
-    this.http
-      .post(Constants.newSlackGroupUrl(access_token, bot_token), null, null)
-      .subscribe(data => {
-        console.log(data);
-      });
-  }
-
-  getSlackTeam(slack_team_code) {
-    this.http.get(Constants.slackTokenUrl(slack_team_code)).subscribe(data => {
-      this.createSlackGroup(
-        data['access_token'],
-        data['bot']['bot_access_token']
-      );
-    });
-  }
-
   checkUserInvite(token, groupName) {
     this.http
       .get(Constants.checkInviteUrl(token, groupName))

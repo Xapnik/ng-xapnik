@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { HomeFooterComponent } from './home-footer/home-footer.component';
+import { AddedToSlackComponent } from './added-to-slack/added-to-slack.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'welcome', component: HomeFooterComponent }
+  { path: 'added-to-slack/:code', component: AddedToSlackComponent }
 ];
 
 @NgModule({
