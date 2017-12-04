@@ -1,0 +1,14 @@
+<mat-toolbar class="toolbar">
+  <span class="logo">
+    <img src="assets/logo.png" height="30" width="30" alt="logo">
+  </span>
+  <span>
+    XAPNIK
+  </span>
+  <span class="spacer"></span>
+  <span class="slack-button">
+    <a (click)="addToSlack()">
+      <img alt="Add to Slack" height="40" width="139" src="{{slackImageSource}}" srcset="{{slackImageSourceSet}}">
+    </a>
+  </span>
+</mat-toolbar>
