@@ -7,13 +7,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { TopbarComponent } from './topbar/topbar.component';
+import { HomeBannerComponent } from './home-banner/home-banner.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    TopbarComponent
+    TopbarComponent,
+    HomeBannerComponent
   ],
   imports: [
     BrowserModule,

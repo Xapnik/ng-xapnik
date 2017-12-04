@@ -1,6 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 body {
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   margin: 0px;
+}
+.header-main {
+  color: #00b5ad;
+}
+.desc.main {
+  color: white;
+}
+.header-secondary {
+  color: #493636;
+}
+.desc.secondary {
+  color: black;
+}
+.content {
+  padding:0px 30px;
+  position: absolute;
+  left: 5px;
 }
