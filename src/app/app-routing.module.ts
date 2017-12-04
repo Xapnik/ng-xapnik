@@ -5,7 +5,7 @@ import { AddedToSlackComponent } from './added-to-slack/added-to-slack.component
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'added-to-slack/:code', component: AddedToSlackComponent }
+  { path: 'added-to-slack', component: AddedToSlackComponent }
 ];
 
 @NgModule({

@@ -3,6 +3,7 @@
 }
 .slack-button {
   margin-top:8px;
+  cursor: pointer;
 }
 .logo {
   margin-top:8px;
