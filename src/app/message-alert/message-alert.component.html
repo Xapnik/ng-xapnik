@@ -1,7 +1,7 @@
 <mat-grid-list cols="1" rowHeight="10em">
     <mat-grid-tile class="container" [ngClass]="{ 'success': isSuccess, 'error': isError }">
       <span class="content" style="text-align:left;">
-        <p class="desc">{{ message }}</p>
+        <p class="desc">{{ message === undefined ? 'Loading ...' : message }}</p>
       </span>
     </mat-grid-tile>
   </mat-grid-list>

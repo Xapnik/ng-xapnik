@@ -10,7 +10,7 @@ export class MessageAlertComponent implements OnInit {
   @Input() isSuccess: boolean;
   @Input() isError: boolean;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
   }

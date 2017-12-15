@@ -15,6 +15,7 @@ import { HomeFooterComponent } from './home-footer/home-footer.component';
 import { AddedToSlackComponent } from './added-to-slack/added-to-slack.component';
 import { SlackInviteComponent } from './slack-invite/slack-invite.component';
 import { MessageAlertComponent } from './message-alert/message-alert.component';
+import { GroupComponent } from './group/group.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MessageAlertComponent } from './message-alert/message-alert.component';
     HomeFooterComponent,
     AddedToSlackComponent,
     SlackInviteComponent,
-    MessageAlertComponent
+    MessageAlertComponent,
+    GroupComponent
   ],
   imports: [
     BrowserModule,
