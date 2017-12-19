@@ -16,6 +16,7 @@ import { AddedToSlackComponent } from './added-to-slack/added-to-slack.component
 import { SlackInviteComponent } from './slack-invite/slack-invite.component';
 import { MessageAlertComponent } from './message-alert/message-alert.component';
 import { GroupComponent } from './group/group.component';
+import { GroupUserComponent } from './group-user/group-user.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { GroupComponent } from './group/group.component';
     AddedToSlackComponent,
     SlackInviteComponent,
     MessageAlertComponent,
-    GroupComponent
+    GroupComponent,
+    GroupUserComponent
   ],
   imports: [
     BrowserModule,
