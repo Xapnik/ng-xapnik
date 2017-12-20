@@ -2,10 +2,9 @@
   <div *ngFor="let user of users">
       <app-group-user [name]="user.name" [username]="user.username" [avatar]="user.avatar"></app-group-user>
   </div>
-  
 </div>
 <mat-toolbar class="toolbar">
   <span>
-    Group Name
+    {{ groupName }}
   </span>
 </mat-toolbar>
