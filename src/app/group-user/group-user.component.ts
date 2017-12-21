@@ -9,8 +9,11 @@ export class GroupUserComponent implements OnInit {
   @Input() userId: string;
   @Input() username: string;
   @Input() avatar: string;
+  @Input() tweetCount: string;
+  @Input() instagramCount: string;
 
-  constructor() {}
+  constructor() {
+  }
 
   ngOnInit() {}
 }

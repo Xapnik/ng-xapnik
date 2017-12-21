@@ -64,4 +64,8 @@ export class Constants {
   public static tweetsUrl(groupName) {
     return (Constants.DATA_BASE_URL + '/' + groupName + '_tweets.json');
   }
+
+  public static instagramsUrl(groupName) {
+    return (Constants.DATA_BASE_URL + '/' + groupName + '_instagrams.json');
+  }
 }

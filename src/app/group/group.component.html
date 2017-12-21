@@ -1,6 +1,12 @@
 <div style="margin-top:50px;">
   <div *ngFor="let user of users">
-      <app-group-user [userId]="user.XpnkID" [username]="user.TweeterID" [avatar]="user.ProfileImg"></app-group-user>
+      <app-group-user 
+        [userId]="user.XpnkID" 
+        [username]="user.TweeterID" 
+        [avatar]="user.ProfileImg" 
+        [tweetCount]="getTweetCount(user.XpnkID)" 
+        [instagramCount]="getInstagramCount(user.XpnkID)">
+      </app-group-user>
   </div>
 </div>
 <mat-toolbar class="toolbar">
