@@ -68,4 +68,8 @@ export class Constants {
   public static instagramsUrl(groupName) {
     return (Constants.DATA_BASE_URL + '/' + groupName + '_instagrams.json');
   }
+
+  public static disqusUrl(groupName) {
+    return (Constants.DATA_BASE_URL + '/' + groupName + '_disqus.json');
+  }
 }

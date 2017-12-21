@@ -12,16 +12,22 @@ export class GroupComponent implements OnInit {
   users: Object;
   tweets: Object;
   instagrams: Object;
+  disqus: Object;
   groupName: string;
 
   constructor(private route: ActivatedRoute, private http: HttpClient) {
     this.route.params.subscribe(res => (this.groupName = res.groupName));
-    this.getTweets();
-    this.getInstagrams();
-    this.getUsers();
+    this.loadData();
   }
 
   ngOnInit() {}
+
+  loadData() {
+    this.getUsers();
+    this.getTweets();
+    this.getInstagrams();
+    this.getDisqus();
+  }
 
   getUsers() {
     this.http.get(Constants.usersUrl(this.groupName)).subscribe(data => {
@@ -41,18 +47,32 @@ export class GroupComponent implements OnInit {
     });
   }
 
+  getDisqus() {
+    this.http.get(Constants.disqusUrl(this.groupName)).subscribe(data => {
+      this.disqus = data;
+    });
+  }
+
   getTweetCount(userId) {
-    if (this.tweets){
+    if (this.tweets) {
       return this.tweets.filter(user => user.XpnkID === userId)[0].TwitterPosts
-      .length;
+        .length;
     }
     return null;
   }
 
   getInstagramCount(userId) {
-    if (this.instagrams){
-      return this.instagrams.filter(user => user.XpnkID === userId)[0].InstagramPosts
-      .length;
+    if (this.instagrams) {
+      return this.instagrams.filter(user => user.XpnkID === userId)[0]
+        .InstagramPosts.length;
+    }
+    return null;
+  }
+
+  getDisqusCount(userId) {
+    if (this.disqus) {
+      return this.disqus.filter(user => user.XpnkID === userId)[0].DisqusPosts
+        .length;
     }
     return null;
   }

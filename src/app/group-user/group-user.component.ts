@@ -11,6 +11,7 @@ export class GroupUserComponent implements OnInit {
   @Input() avatar: string;
   @Input() tweetCount: string;
   @Input() instagramCount: string;
+  @Input() disqusCount: string;
 
   constructor() {
   }
