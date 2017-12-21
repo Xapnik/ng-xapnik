@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./group-user.component.css']
 })
 export class GroupUserComponent implements OnInit {
-  @Input() name: string;
+  @Input() userId: string;
   @Input() username: string;
   @Input() avatar: string;
 

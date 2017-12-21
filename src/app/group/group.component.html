@@ -1,10 +1,10 @@
 <div style="margin-top:50px;">
   <div *ngFor="let user of users">
-      <app-group-user [name]="user.name" [username]="user.username" [avatar]="user.avatar"></app-group-user>
+      <app-group-user [userId]="user.XpnkID" [username]="user.TweeterID" [avatar]="user.ProfileImg"></app-group-user>
   </div>
 </div>
 <mat-toolbar class="toolbar">
-  <span>
+  <span style="text-transform: uppercase">
     {{ groupName }}
   </span>
 </mat-toolbar>

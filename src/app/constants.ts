@@ -6,6 +6,8 @@ export class Constants {
   private static SLACK_CLIENT_SECRET = environment.slackClientSecret;
   private static REDIRECT_URL = environment.redirectUrl;
   private static API_BASE_URL = environment.apiBaseUrl;
+  private static DATA_BASE_URL = environment.dataBaseUrl;
+
   public static SLACK_URL =
     'https://slack.com/oauth/authorize?scope=incoming-webhook,commands,bot,team:read,users:read,chat:write:user&client_id=' +
     Constants.SLACK_CLIENT_ID +
@@ -53,5 +55,13 @@ export class Constants {
     params['xpnk_token'] = token;
     params['xpnk_group_name'] = groupName;
     return params;
+  }
+
+  public static usersUrl(groupName) {
+    return (Constants.DATA_BASE_URL + '/' + groupName + '_users.json');
+  }
+
+  public static tweetsUrl(groupName) {
+    return (Constants.DATA_BASE_URL + '/' + groupName + '_tweets.json');
   }
 }

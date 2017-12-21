@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { Constants } from '../constants';
 
 @Component({
   selector: 'app-group',
@@ -7,10 +9,17 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./group.component.css']
 })
 export class GroupComponent implements OnInit {
-  users: { name: string; username: string; avatar: string }[];
+  users: Object;
   groupName: string;
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private http: HttpClient) {
+    this.route.params.subscribe(res => this.groupName = res.groupName);
+    this.getRemoteUsers();
+  }
+
+  ngOnInit() {}
+
+  getLocalUsers() {
     this.users = [
       {
         name: 'Edem Kumodzi',
@@ -25,8 +34,11 @@ export class GroupComponent implements OnInit {
           'https://pbs.twimg.com/profile_images/630619555975593984/r0gBJqUi_400x400.png'
       }
     ];
-    this.route.params.subscribe(res => this.groupName = res.groupName.toUpperCase());
   }
 
-  ngOnInit() {}
+  getRemoteUsers() {
+    this.http.get(Constants.usersUrl(this.groupName)).subscribe(data => {
+      this.users = data;
+    });
+  }
 }
