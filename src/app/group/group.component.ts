@@ -9,10 +9,10 @@ import { Constants } from '../constants';
   styleUrls: ['./group.component.css']
 })
 export class GroupComponent implements OnInit {
-  users: Object;
-  tweets: Object;
-  instagrams: Object;
-  disqus: Object;
+  users: any;
+  tweets: any;
+  instagrams: any;
+  disqus: any;
   groupName: string;
 
   constructor(private route: ActivatedRoute, private http: HttpClient) {

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule, MatGridListModule, MatCardModule, MatButtonToggleModule, MatIconModule } from '@angular/material';
+import { MatToolbarModule, MatGridListModule, MatCardModule, MatButtonToggleModule, MatIconModule, MatListModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
@@ -17,6 +17,7 @@ import { SlackInviteComponent } from './slack-invite/slack-invite.component';
 import { MessageAlertComponent } from './message-alert/message-alert.component';
 import { GroupComponent } from './group/group.component';
 import { GroupUserComponent } from './group-user/group-user.component';
+import { GroupAuthComponent } from './group-auth/group-auth.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { GroupUserComponent } from './group-user/group-user.component';
     SlackInviteComponent,
     MessageAlertComponent,
     GroupComponent,
-    GroupUserComponent
+    GroupUserComponent,
+    GroupAuthComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +44,7 @@ import { GroupUserComponent } from './group-user/group-user.component';
     MatCardModule,
     MatButtonToggleModule,
     MatIconModule,
+    MatListModule,
     HttpClientModule
   ],
   providers: [],
