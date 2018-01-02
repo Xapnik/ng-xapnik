@@ -1,18 +1,19 @@
-<mat-toolbar class="toolbar">
-  <span class="logo">
-    <a routerLink="" class="root-link">
-      <img src="assets/logo.png" height="30" width="30" alt="logo">
-    </a>
-  </span>
-  <span>
-    <a routerLink="" class="root-link">
-      XAPNIK
-    </a>
-  </span>
-  <span class="spacer"></span>
-  <span class="slack-button">
-    <a (click)="addToSlack()">
-      <img alt="Add to Slack" height="40" width="139" src="{{slackImageSource}}" srcset="{{slackImageSourceSet}}">
-    </a>
-  </span>
-</mat-toolbar>
+<div class="jumbotron jumbotron-fluid home">
+  <div class="container-fluid hometop">
+    <div class="row justify-content-sm-center">
+    <div class="col-sm-12 mr-5 pr-5" style="text-align: center;">
+      <a routerLink="" class="root-link">
+       <h1 class="display-4 title"><img src="assets/Logo-01-1000x1000-WHITE.png" height="60" width="60" alt="logo"> Xapnik</h1>
+      </a>
+    </div>
+    </div>
+  </div>  
+  <app-home-banner></app-home-banner>
+  <div class="slack-button row justify-items-center mt-5 pb-3">
+    <div class="col-sm-12" style="text-align: center;">
+      <a (click)="addToSlack()">
+        <img alt="Add to Slack" height="40" width="139" src="{{slackImageSource}}" srcset="{{slackImageSourceSet}}">
+      </a>
+    </div>
+  </div>
+</div>

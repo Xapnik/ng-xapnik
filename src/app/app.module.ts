@@ -5,6 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule, MatGridListModule, MatCardModule, MatButtonToggleModule, MatIconModule, MatListModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 
+import { AlertModule } from 'ngx-bootstrap';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { TopbarComponent } from './topbar/topbar.component';
@@ -45,7 +47,8 @@ import { GroupAuthComponent } from './group-auth/group-auth.component';
     MatButtonToggleModule,
     MatIconModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
+    AlertModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
