@@ -12,4 +12,8 @@ export class GroupAuthComponent implements OnInit {
   ngOnInit() {
   }
 
+  linkTwitter() {
+    console.log('hello');
+  }
+
 }
