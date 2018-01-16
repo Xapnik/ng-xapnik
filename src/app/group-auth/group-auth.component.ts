@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare var OAuth: any;
 
 @Component({
   selector: 'app-group-auth',
@@ -13,7 +14,7 @@ export class GroupAuthComponent implements OnInit {
   }
 
   linkTwitter() {
-    console.log('hello');
+    OAuth.redirect('twitter', 'callback/url');
   }
 
 }
