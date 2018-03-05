@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { environment } from '../environments/environment';
+
 declare var OAuth: any;
 
 @Component({
@@ -8,6 +10,6 @@ declare var OAuth: any;
 })
 export class AppComponent {
   constructor() {
-    OAuth.initialize('X2__GNhzcc6fng7PNt9t7euQwpQ');
+    OAuth.initialize(environment.oAuthKey);
   }
 }

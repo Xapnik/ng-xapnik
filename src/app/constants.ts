@@ -72,4 +72,8 @@ export class Constants {
   public static disqusUrl(groupName) {
     return (Constants.DATA_BASE_URL + '/' + groupName + '_disqus.json');
   }
+
+  public static twitterUserUrl(userId) {
+    return (Constants.API_BASE_URL + '/' + 'users/twitter?id=' + userId);
+  }
 }
